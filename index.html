@@ -12,17 +12,96 @@
         <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="" id="logo">
         <h1>HTML/CSS Quiz</h1>
         <nav><ul>
-            <li><a href="">INFO</a></li>
-            <li><a href="">HTML</a></li>
-            <li><a href="">CSS</a></li>
+            <li><a href="#student-info">INFO</a></li>
+            <li><a href="#html-questions">HTML</a></li>
+            <li><a href="#css-questions">CSS</a></li>
         </ul></nav>
     </header>
     <main>
         <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
-            <section></section>
-            <section></section>
-            <section></section>
+            <section role="region" aria-labelledby="student-info">
+                <H2 id="student-info">Lorem, ipsum dolor.</H2>
+                <div class="info">
+                    <label for="student-name">Name:</label>
+                    <input type="text" id="student-name" placeholder="Enter your full name">
+                </div>
+                <div class="info">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email address">
+                </div>
+                <div class="info">
+                    <label for="dob"> D.O.B:<span class="sr-only">Date Of Birth</span></label>
+                    <input type="date" id="dob">
+                </div>
+            </section>
+            <section role="region" aria-labelledby="html-questions">
+                <H2 id="html-questions">Lorem, ipsum dolor.</H2>
+                <div class="question-block">
+                    <p>1</p>
+                    <fieldset class="question" name="question0">
+                        <legend>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q1-a1">
+                                    <input type="radio" id="q1-a1" name="q1">True
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q1-a2">
+                                    <input type="radio" id="q1-a2" name="q1">False
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="question-block">
+                    <p>2</p>
+                    <fieldset class="question" name="question-1">
+                        <legend>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ipsum repellat iste?</legend>
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q2-a1">
+                                    <input type="radio" id="q2-a1" name="q2">True
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q2-a2">
+                                    <input type="radio" id="q2-a2" name="q2">False
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </section>
+            <section role="region" aria-labelledby="css-questions">
+                <H2 id="css-questions">Lorem, ipsum dolor.</H2>
+                <div class="formrow">
+                    <div class="question-block"><label for="css-q1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, repellendus.</label></div>
+                    <div class="answer">
+                        <select name="css-question1" id="css-q1" required>
+                            <option value="">Select an Option</option>
+                            <option value="yes">yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="question-block">
+                        <label for="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, mollitia?</label>
+                    </div>
+                    <div class="answer">
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </section>
+            <button type="submit">Send</button>
         </form>  
     </main>
+    <footer>
+        <address>
+            <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+            San Francisco<br />
+            California<br />
+            USA
+        </address>
+    </footer>
 </body>
 </html>
